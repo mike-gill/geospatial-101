@@ -28,6 +28,7 @@ Normal image formats, eg:
   * Jpeg2000
   * PNG
   * GIF  etc
+  
 GIS formats, eg:
   * GeoTIFF
   * ESRI ASCII grid

@@ -159,17 +159,19 @@ Can hillshade su02, this time using QGIS Raster Menu > Terrain Analysis > Hillsh
 Use the Qgis2threejs plugin.
 
 # Geospatial Web Services
-Can add Web Map Service (WMS) layers.
+Can add Web Map Service (WMS) layers.  [Good description in Geoserver docs](http://docs.geoserver.org/stable/en/user/services/wms/reference.html).
 
 [British Geological Survey WMS Services](http://www.bgs.ac.uk/data/services/digmap50wms.html)
 1:50k Geology:  https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?
 
-Example GetMap request:  [](https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?REQUEST=GetMap&VERSION=1.3.0&LAYERS=BGS.50k.Bedrock&STYLES=default&FORMAT=image/gif&CRS=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450)
+Example GetMap request: https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?REQUEST=GetMap&VERSION=1.3.0&LAYERS=BGS.50k.Bedrock&STYLES=default&FORMAT=image/gif&CRS=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450
 
-Example GetFeatureInfo request:  [](https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?version=1.3.0&request=GetFeatureInfo&format=image/png&layers=BGS.50k.Bedrock&query_layers=BGS.50k.Bedrock&info_format=text/html&i=200&j=400&radius=0&crs=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450&styles=default)
+Example GetFeatureInfo request: https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?version=1.3.0&request=GetFeatureInfo&format=image/png&layers=BGS.50k.Bedrock&query_layers=BGS.50k.Bedrock&info_format=text/html&i=200&j=400&radius=0&crs=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450&styles=default
 
 
 ### 3D Visualisation
-Use the Qgis2threejs plugin.
+Use the Qgis2threejs plugin to export section of Lidar.  Use Qgis2threejs button.  Choose DEM to use for height of terrain.
+
+Another example:  http://labs.geodigging.co.uk/worbarrow/worbarrow.html
 
 

@@ -99,3 +99,77 @@ Non-GIS formats need a 'world file' to provide a geographic context for the imag
 ```
 See [the Wikipedia article](https://en.wikipedia.org/wiki/World_file) for a detailed explanation, or [ESRI's briefer explanation](http://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/world-files-for-raster-datasets.htm).
 
+### Raster Composites
+#### ArcGIS Image Catalog
+Two types
+
+* managed - raster data is stored in the image catalog
+* unmanaged - raster data stays in source files, image catalog is simply a lookup file.
+
+TODO - Add instructions here
+
+
+#### GDAL VRT file
+GDAL can be used to create a VRT file,which acts as an index to multiple files.
+```
+set GDAL_DATA=C:\Program Files\QGIS Wien\share\gdal
+set PATH="C:\Program Files\QGIS Wien\bin";%PATH%
+cd ea-lidar-1m
+
+gdalbuildvrt -a_srs EPSG:27700 ea-lidar.vrt *.asc
+```
+* This can be displayed in QGIS and assigned a colour ramp
+* VRT files are supported in ArcGIS.
+
+This can be displayed in QGIS and assigned a colour ramp.  The environment Agency have an [interactive map for LIDAR download](http://environment.data.gov.uk/ds/survey#/download).  Click on the map to select a square, and download options will appear below the map.
+
+### Raster processing
+Raster processing is cell based.  Types:
+
+* raster algebra (eg Raster A + Raster B) - see Raster Calculator in QGIS.
+* cell based processing in a local region around each cell.
+
+Example of the latter is terrain analysis.  The following [GDAL terrain functions](http://www.gdal.org/gdaldem.html) are also available as menu items in QGIS.
+
+#### Hillshade
+```
+gdaldem hillshade ea-lidar.vrt ea-lidar-hillshade.tif
+```
+
+#### Slope
+```
+gdaldem slope ea-lidar.vrt ea-lidar-slope.tif
+```
+
+#### Aspect
+```
+gdaldem aspect ea-lidar.vrt ea-lidar-aspect.tif
+```
+
+#### Visibiity Analysis
+See the Processing Toolbox in QGIS.  Grass > Raster > r.los
+
+data\panaorama\su02.asc
+Viewing position:  413721,132662
+Max distance 10000
+
+Can hillshade su02, this time using QGIS Raster Menu > Terrain Analysis > Hillshade
+
+### 3D Visualisation
+Use the Qgis2threejs plugin.
+
+# Geospatial Web Services
+Can add Web Map Service (WMS) layers.
+
+[British Geological Survey WMS Services](http://www.bgs.ac.uk/data/services/digmap50wms.html)
+1:50k Geology:  https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?
+
+Example GetMap request:  [](https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?REQUEST=GetMap&VERSION=1.3.0&LAYERS=BGS.50k.Bedrock&STYLES=default&FORMAT=image/gif&CRS=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450)
+
+Example GetFeatureInfo request:  [](https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?version=1.3.0&request=GetFeatureInfo&format=image/png&layers=BGS.50k.Bedrock&query_layers=BGS.50k.Bedrock&info_format=text/html&i=200&j=400&radius=0&crs=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450&styles=default)
+
+
+### 3D Visualisation
+Use the Qgis2threejs plugin.
+
+

@@ -1,0 +1,45 @@
+<VRTDataset rasterXSize="2000" rasterYSize="2000">
+  <SRS>PROJCS["OSGB 1936 / British National Grid",GEOGCS["OSGB 1936",DATUM["OSGB_1936",SPHEROID["Airy 1830",6377563.396,299.3249646,AUTHORITY["EPSG","7001"]],TOWGS84[446.448,-125.157,542.06,0.15,0.247,0.842,-20.489],AUTHORITY["EPSG","6277"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4277"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",49],PARAMETER["central_meridian",-2],PARAMETER["scale_factor",0.9996012717],PARAMETER["false_easting",400000],PARAMETER["false_northing",-100000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","27700"]]</SRS>
+  <GeoTransform> 4.1300000000000000e+005, 1.0000000000000000e+000, 0.0000000000000000e+000, 1.3400000000000000e+005, 0.0000000000000000e+000,-1.0000000000000000e+000</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">95.98999786377</MDI>
+      <MDI key="STATISTICS_MEAN">63.395821603298</MDI>
+      <MDI key="STATISTICS_MINIMUM">47.562999725342</MDI>
+      <MDI key="STATISTICS_STDDEV">17.037224009374</MDI>
+    </Metadata>
+    <NoDataValue>-9.99900000000000E+003</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">su1332_DTM_1m.asc</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1000" RasterYSize="1000" DataType="Float32" BlockXSize="1000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="1000" ySize="1000" />
+      <DstRect xOff="0" yOff="1000" xSize="1000" ySize="1000" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">su1333_DTM_1m.asc</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1000" RasterYSize="1000" DataType="Float32" BlockXSize="1000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="1000" ySize="1000" />
+      <DstRect xOff="0" yOff="0" xSize="1000" ySize="1000" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">su1432_DTM_1m.asc</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1000" RasterYSize="1000" DataType="Float32" BlockXSize="1000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="1000" ySize="1000" />
+      <DstRect xOff="1000" yOff="1000" xSize="1000" ySize="1000" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">su1433_DTM_1m.asc</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1000" RasterYSize="1000" DataType="Float32" BlockXSize="1000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="1000" ySize="1000" />
+      <DstRect xOff="1000" yOff="0" xSize="1000" ySize="1000" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

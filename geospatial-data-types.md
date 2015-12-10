@@ -172,6 +172,6 @@ Example GetFeatureInfo request: https://map.bgs.ac.uk/arcgis/services/BGS_Detail
 ### 3D Visualisation
 Use the Qgis2threejs plugin to export section of Lidar.  Use Qgis2threejs button.  Choose DEM to use for height of terrain.
 
-Another example:  http://labs.geodigging.co.uk/worbarrow/worbarrow.html
+Another example:  http://labs.geodigging.co.uk/worbarrow/worbarrow.html.  View page source to see how data is encoded (including image as Base 64 encoding).
 
 

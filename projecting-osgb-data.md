@@ -83,7 +83,7 @@ Output image is:
 ## Transforming data in existing software packages
 * Most geospatial software will apply a Helmert transformation by default
 * This can be up to 5m accuracy.  This is acceptable for some data applications and resolutions.
-* To apply the OSTN02 transformation, most packages support the use of a NTv2  - see (the OS OSTN02 – NTv2 format page)[https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/ostn02-ntv2-format.html]
+* To apply the OSTN02 transformation, most packages support the use of a NTv2  - see (the OS OSTN02 – NTv2 format page)[https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/ostn02-ntv2-format.html].  Doiwnload zip containing .gsb file from here.
 
 ### An example using GDAL/OGR
 
@@ -92,5 +92,22 @@ set GDAL_DATA=C:\Program Files\QGIS Wien\share\gdal
 set PROJ_LIB=C:\Program Files\QGIS Wien\share\proj
 set PROJ_DEBUG=true
 set PATH="C:\Program Files\QGIS Wien\bin";%PATH%
+
+cd demo\data\ostn02
+
+# Transform OSGB points to WGS84 using accurate transformation
+ogr2ogr -t_srs EPSG:4326 -s_srs "+init=EPSG:27700 +nadgrids=..\..\..\resources\ostn02-ntv2\OSTN02_NTv2.gsb" -f GeoJSON test_wgs84_ntv2.json test_osgb.json
+
+# Transform WGS84 to OSGB using 3 parameter transformation
+ogr2ogr -t_srs "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs +towgs84=375,-111,431" -s_srs EPSG:4326  -f GeoJSON osgb_3param.json test_wgs84_ntv2.json
+## Remember to paste EPSG into the output file before adding toQGIS ##
+
+# Transform using default 7 parameter Helmert transformation
+ogr2ogr -t_srs EPSG:27700 -s_srs EPSG:4326 -f GeoJSON osgb_7param.json test_wgs84_ntv2.json
+
+# Transform using NTv2 transformation
+ogr2ogr -t_srs "+init=EPSG:27700 +nadgrids=..\..\..\resources\ostn02-ntv2\OSTN02_NTv2.gsb" -s_srs EPSG:4326 -f GeoJSON osgb_ntv2.json test_wgs84_ntv2.json
 ```
+
+Add these to QGIS along with image giving context in demo\data\ostn02.
 

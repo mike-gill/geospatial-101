@@ -109,5 +109,5 @@ ogr2ogr -t_srs EPSG:27700 -s_srs EPSG:4326 -f GeoJSON osgb_7param.json test_wgs8
 ogr2ogr -t_srs "+init=EPSG:27700 +nadgrids=..\..\..\resources\ostn02-ntv2\OSTN02_NTv2.gsb" -s_srs EPSG:4326 -f GeoJSON osgb_ntv2.json test_wgs84_ntv2.json
 ```
 
-Add these to QGIS along with image giving context in demo\data\ostn02.
+Add the GeoJSON files to QGIS along with image giving context in demo\data\ostn02.
 

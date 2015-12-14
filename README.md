@@ -5,16 +5,8 @@ Introduction to some key geospatial concepts and technologies
 * [Geospatial data types](geospatial-data-types.md)
   * Raster
   * Vector
-* Spatial relationships
-* Coordinate systems
-  * Projections
-  * Transformations
-  * Grid references
-* Software
-  * ETL
-  * Desktop GIS
-  * Geospatial Servers
-  * Databases
+* [Spatial relationships](spatial-rels.md)
+* [Projecting OSGB data](projecting-osgb-data.md)
 * Testing geospatial data
   * Java, Ruby
 

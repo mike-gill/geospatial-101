@@ -1,0 +1,27 @@
+{ "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:27700"
+    }
+  },
+  "features": [
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [414973.31, 115409.34]},
+      "properties": {"prop0": "value0"}
+    },
+	{ "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [414997.03, 115408.22]},
+      "properties": {"prop0": "value0"}
+    },
+	{ "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [414996.46, 115397.20]},
+      "properties": {"prop0": "value0"}
+    },
+	{ "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [414972.75, 115398.67]},
+      "properties": {"prop0": "value0"}
+    }
+  ]
+}
+   

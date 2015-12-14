@@ -1,5 +1,9 @@
 # Spatial relationships quiz
 
+A quick quiz to gauge the understanding of spatial relationships.  The relationships can be tested using the Java Topology Suite Test Builder tool.  JTS can be downloaded from [http://sourceforge.net/projects/jts-topo-suite/](http://sourceforge.net/projects/jts-topo-suite/).  Extract the zip, then run bin\testbuilder.bat.
+
+The section after the quiz explains how to understand the relationships using the DE-9IM model.
+
 ## Two adjacent polygons
 ```
 A:  POLYGON ((0 0, 10 0, 10 10, 0 10, 0 0))  
@@ -157,3 +161,18 @@ Crosses?    **T**
 Overlaps?   **F**  
 B Within A? **F**  
 A Covers B? **F**  
+
+# DE-9IM
+* See [Wikipedia article on DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+* Most geospatial software allows you to specify your own matrix.  For example, outputting polygons for a tiled product:
+
+|               | Interior | Boundary | Exterior |
+| ------------- |:--------:|:--------:| --------:|
+| Interior      | T        | *        | *        |
+| Boundary      | *        | *        | *        |
+| Exterior      | *        | *        | *        |
+
+or:  T********
+
+
+

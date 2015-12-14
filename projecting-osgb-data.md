@@ -1,6 +1,6 @@
 # Projecting OSGB Data
-* The best resource is:  (OSTN02 and OSGM02)[https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/formats-for-developers.html]
-* In the zip file that can be downloaded, see (A_Guide_to_Coordinate_Systems_in_Great_Britain.pdf)[resources/ostn02-ogm02-files/A_Guide_to_Coordinate_Systems_in_Great_Britain.pdf].  In particular;
+* The best resource is:  [OSTN02 and OSGM02](https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/formats-for-developers.html)
+* In the zip file that can be downloaded, see [A_Guide_to_Coordinate_Systems_in_Great_Britain.pdf](resources/ostn02-ogm02-files/A_Guide_to_Coordinate_Systems_in_Great_Britain.pdf).  In particular;
 	* Section 1.2 - A few myths about coordinate systems
 	* Page 24: "Hence the overall size of the TRF still used for British mapping came to be derived from the measurement of a single distance between two stations on Hounslow Heath in 1784 using eighteen-foot glass rods! The error thus incurred in OSGB36 is surprisingly low – only about 20 metres in the length of the country."
 	* Page 29:  "no exact transformation exists between two geodetic coordinate systems."
@@ -10,7 +10,7 @@
 	* Page 31:  "To cope with the distortions in the OSGB36 TRF, different transformations are needed in different parts of the country. For this reason, the national standard datum transformation between OSGB36 and ETRS89 is not a simple Helmert datum transformation. Instead, Ordnance Survey has developed a ‘rubber-sheet’ style transformation that works with a transformation grid expressed in easting and northing coordinates. The grids of northing and easting shifts between ETRS89 and OSGB36 cover Britain at a resolution of one kilometre. From these grids, a northing and easting shift for each point to be transformed is obtained by a bilinear interpolation. This is called the National Grid Transformation OSTN02, and it is freely available in software packages from the Ordnance Survey GPS website"
 
 ## Helmert Transformation	
-* The appendix gives the formulae for applying a 7 parameter Helmert transformation when converting from WGS84 to British National Grid (and back again).  This is fairly straightforward to code - eg see (src/helmert/OSGBConverter.js)[src/helmert/OSGBConverter.js]
+* The appendix gives the formulae for applying a 7 parameter Helmert transformation when converting from WGS84 to British National Grid (and back again).  This is fairly straightforward to code - eg see [src/helmert/OSGBConverter.js](src/helmert/OSGBConverter.js)
 
 ## OSTN02 Transformation
 * To do a high accuracy transformation, use OSTN02 - see (Transformations and OSGM02 user guide.pdf)[resources/ostn02-ogm02-files/Transformations and OSGM02 user guide.pdf].
@@ -83,7 +83,7 @@ Output image is:
 ## Transforming data in existing software packages
 * Most geospatial software will apply a Helmert transformation by default
 * This can be up to 5m accuracy.  This is acceptable for some data applications and resolutions.
-* To apply the OSTN02 transformation, most packages support the use of a NTv2  - see (the OS OSTN02 – NTv2 format page)[https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/ostn02-ntv2-format.html].  Doiwnload zip containing .gsb file from here.
+* To apply the OSTN02 transformation, most packages support the use of a NTv2  - see [the OS OSTN02 – NTv2 format page](https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/ostn02-ntv2-format.html).  Doiwnload zip containing .gsb file from here.
 
 ### An example using GDAL/OGR
 

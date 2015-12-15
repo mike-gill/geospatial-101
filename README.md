@@ -7,6 +7,8 @@ Introduction to some key geospatial concepts and technologies
   * Vector
 * [Spatial relationships](spatial-rels.md)
 * [Projecting OSGB data](projecting-osgb-data.md)
-* Testing geospatial data
-  * Java, Ruby
+* [Testing geospatial data](testing-geospatial-data.md)
+  * Concepts
+  * Example approach
+  * Technologies
 

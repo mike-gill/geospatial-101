@@ -11,7 +11,7 @@
 
 See [the Wikipedia article of GIS formats](https://en.wikipedia.org/wiki/GIS_file_formats) for a comparison of raster and vector.
 
-## Raster
+## Raster data
 ### Raster data types
 Cell values can represent:
 * Colour
@@ -156,20 +156,6 @@ Max distance 10000
 Can hillshade su02, this time using QGIS Raster Menu > Terrain Analysis > Hillshade
 
 ### 3D Visualisation
-Use the Qgis2threejs plugin.
-
-# Geospatial Web Services
-Can add Web Map Service (WMS) layers.  [Good description in Geoserver docs](http://docs.geoserver.org/stable/en/user/services/wms/reference.html).
-
-[British Geological Survey WMS Services](http://www.bgs.ac.uk/data/services/digmap50wms.html)
-1:50k Geology:  https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?
-
-Example GetMap request: https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?REQUEST=GetMap&VERSION=1.3.0&LAYERS=BGS.50k.Bedrock&STYLES=default&FORMAT=image/gif&CRS=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450
-
-Example GetFeatureInfo request: https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer?version=1.3.0&request=GetFeatureInfo&format=image/png&layers=BGS.50k.Bedrock&query_layers=BGS.50k.Bedrock&info_format=text/html&i=200&j=400&radius=0&crs=EPSG:27700&BBOX=400000,400000,405200,405200&WIDTH=450&HEIGHT=450&styles=default
-
-
-### 3D Visualisation
 Use the Qgis2threejs plugin to export section of Lidar.  Use Qgis2threejs button.  Choose DEM to use for height of terrain.
 
 Other examples: 
@@ -178,4 +164,12 @@ Other examples:
 
 View page source to see how data is encoded (including image as Base 64 encoding).
 
-
+## Vector Data
+* Data is stored as geometries, defined with vertices.  
+* Main types are Point, Line and Polygon.
+* For a good discussion, see [QGIS introduction](http://docs.qgis.org/2.6/en/docs/gentle_gis_introduction/vector_data.html)
+* Can represent geometries as strings using Well Known Text (WKT) - see [Wikipedia article](https://en.wikipedia.org/wiki/Well-known_text)
+	* OGC standard
+	* Most geospatial software supports WKT
+	* Binary version called Well Known Binary (WKB)
+* Geometries can be 2 or 3D, and can contain measures.

@@ -38,7 +38,7 @@ The basic approach is the same as for any data testing - 'geospatial is not spec
 	* allows rounding of coordinates
 	* GeoTools can directly import / export JTS features to / from Oracle (and other sources)
 	* allows other spatial comparisons
-	* in-built 'equals' method which will do spatial comparison of geometries.  See [featureListComparer.java](src/data-test/featureListComparer.java) for an example of how easy comparison is.
+	* in-built 'equals' method which will do spatial comparison of geometries.  See [FeatureListComparer.java](src/data-test/FeatureListComparer.java) for an example of how easy comparison is.
 
 ### Ruby
 * Ruby has RGeo bindings for the GEOS C++ library, which implements JTS.

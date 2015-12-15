@@ -174,5 +174,11 @@ A Covers B? **F**
 
 or:  T********
 
+* Beware - some software has its own interpretation of the spatial predicates
+	* eg [Oracle spatial predicates](http://docs.oracle.com/cd/B19306_01/appdev.102/b14255/sdo_intro.htm#i880253) - own implementation of COVERS:
+		* "COVERS -- The interior of one object is completely contained in the interior or the boundary of the other object **and their boundaries intersect**."
+		* This also impacts the opposite COVEREDBY
+		* 1Spatial also use this interpretation.
+
 
 

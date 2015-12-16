@@ -13,7 +13,7 @@
 * The appendix gives the formulae for applying a 7 parameter Helmert transformation when converting from WGS84 to British National Grid (and back again).  This is fairly straightforward to code - eg see [src/helmert/OSGBConverter.js](src/helmert/OSGBConverter.js)
 
 ## OSTN02 Transformation
-* To do a high accuracy transformation, use OSTN02 - see (Transformations and OSGM02 user guide.pdf)[resources/ostn02-ogm02-files/Transformations and OSGM02 user guide.pdf].
+* To do a high accuracy transformation, use OSTN02 - see [Transformations and OSGM02 user guide.pdf](resources/ostn02-ogm02-files/Transformations and OSGM02 user guide.pdf).
 * A grid of adjustments is applied to transformed cartesian coordinates.  Text adjustment file has following fields:
 
 	* Record no 

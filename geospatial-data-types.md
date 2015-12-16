@@ -145,7 +145,17 @@ Two types
 * managed - raster data is stored in the image catalog
 * unmanaged - raster data stays in source files, image catalog is simply a lookup file.
 
-TODO - Add instructions here
+To create an unmanaged catalogue:
+* Search (right hand side in ArcMap) for **'Create Raster Catalog'**.
+* For output location, navigate to folder, click button for ‘New File Geodatabase’ (db symbol with a star), specify name for gdb file, then select that gdb file.
+* Specify 'Raster Catalog Name' eg IRISH_50K
+* At bottom, choose ‘Raster Management Type’ of UNMANAGED .  This is v important!!!!
+* OK to run
+* Wait for layer to appear in data frame (or look in Geoprocessing > Results for status)
+* Search for **'Workspace to Raster Catalog'**
+* Input workspace = folder containing images
+* Browse for target raster catalog (just created)
+* OK
 
 
 #### GDAL VRT file

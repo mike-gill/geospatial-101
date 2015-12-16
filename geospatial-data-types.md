@@ -43,6 +43,8 @@ Any 'GIS' raster formats have georeferencing information in-built into the heade
 set GDAL_DATA=C:\Program Files\QGIS Wien\share\gdal
 set PATH="C:\Program Files\QGIS Wien\bin";%PATH%
 
+cd demo\data
+
 gdalinfo "vmdras\SU00.tif"
 ```
 ```
@@ -98,6 +100,43 @@ Non-GIS formats need a 'world file' to provide a geographic context for the imag
 1299950.000000000000000
 ```
 See [the Wikipedia article](https://en.wikipedia.org/wiki/World_file) for a detailed explanation, or [ESRI's briefer explanation](http://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/world-files-for-raster-datasets.htm).
+
+Example world file is at [demo/data/ostn02/SU1415_RGB.jgw](demo/data/ostn02/SU1415_RGB.jgw)
+
+```
+gdalinfo ostn02\SU1415_RGB.jpg
+```
+```
+Driver: JPEG/JPEG JFIF
+Files: ostn02\SU1415_RGB.jpg
+       ostn02\SU1415_RGB.jgw
+Size is 4000, 4000
+Coordinate System is `'
+Origin = (414000.000000000000000,116000.000000000000000)
+Pixel Size = (0.250000000000000,-0.250000000000000)
+Image Structure Metadata:
+  COMPRESSION=JPEG
+  INTERLEAVE=PIXEL
+  SOURCE_COLOR_SPACE=YCbCr
+Corner Coordinates:
+Upper Left  (  414000.000,  116000.000)
+Lower Left  (  414000.000,  115000.000)
+Upper Right (  415000.000,  116000.000)
+Lower Right (  415000.000,  115000.000)
+Center      (  414500.000,  115500.000)
+Band 1 Block=4000x1 Type=Byte, ColorInterp=Red
+  Overviews: 2000x2000, 1000x1000, 500x500
+  Image Structure Metadata:
+    COMPRESSION=JPEG
+Band 2 Block=4000x1 Type=Byte, ColorInterp=Green
+  Overviews: 2000x2000, 1000x1000, 500x500
+  Image Structure Metadata:
+    COMPRESSION=JPEG
+Band 3 Block=4000x1 Type=Byte, ColorInterp=Blue
+  Overviews: 2000x2000, 1000x1000, 500x500
+  Image Structure Metadata:
+    COMPRESSION=JPEG
+```
 
 ### Raster Composites
 #### ArcGIS Image Catalog

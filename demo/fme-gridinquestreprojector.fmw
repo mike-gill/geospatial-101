@@ -38,7 +38,7 @@
 #! DOC_EXTENTS="1662.02 593.007"
 #! USAGE=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-33.0003 0"
+#! VIEW_POSITION="-147.001 81.0008"
 #! REQUIREMENTS=""
 #! LAST_SAVE_BUILD="FME(R) 2015.1.0.3 (20150623 - Build 15485 - WIN32)"
 #! FME_DOCUMENT_GUID="6c4185a8-c66d-44d4-bdde-d1ccdd214a80"
@@ -46,7 +46,7 @@
 #! FME_STROKE_MAX_DEVIATION="0"
 #! SOURCE="NONE"
 #! LEGAL_TERMS_CONDITIONS=""
-#! LAST_SAVE_DATE="2015-12-17T11:32:47"
+#! LAST_SAVE_DATE="2015-12-17T14:58:21"
 #! WARN_INVALID_XFORM_PARAM="Yes"
 #! FME_DOCUMENT_PRIORGUID="cb529604-38bb-48ee-96ec-0fab84d74ab8"
 #! SHOW_INFO_NODES="true"
@@ -695,7 +695,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="false"
-#! NODE_NAME="fme-default-reproj-osgb"
+#! NODE_NAME="fme-gridinquest-osgb"
 #! FEATURE_TYPE_NAME=""
 #! FEATURE_TYPE_NAME_QUALIFIER=""
 #! IS_EDITABLE="true"
@@ -714,7 +714,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="false"
-#! NODE_NAME="fme-gridinquest-osgb"
+#! NODE_NAME="fme-default-reproj-osgb"
 #! FEATURE_TYPE_NAME=""
 #! FEATURE_TYPE_NAME_QUALIFIER=""
 #! IS_EDITABLE="true"
@@ -1136,12 +1136,12 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME GridInQuestReprojector    INPUT  FEATUR
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC GridInQuestReprojector_REPROJECTED TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-default-reproj-osgb<closeparen> GEOMETRY    ROUTE FME_GENERIC test_wgs84_ntv2_1_vCvBdX2GT3w= TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-gridinquest-osgb<closeparen> COORDINATE_SYSTEM EPSG:27700 GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC GridInQuestReprojector_REPROJECTED TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-gridinquest-osgb<closeparen> GEOMETRY    ROUTE FME_GENERIC test_wgs84_ntv2_1_vCvBdX2GT3w= TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-default-reproj-osgb<closeparen> COORDINATE_SYSTEM EPSG:27700 GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-SHAPE_1_DEF fme-default-reproj-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)
+SHAPE_1_DEF fme-gridinquest-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)
 # -------------------------------------------------------------------------
-SHAPE_2_DEF fme-gridinquest-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)
+SHAPE_2_DEF fme-default-reproj-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)

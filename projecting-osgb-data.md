@@ -116,3 +116,4 @@ Add the GeoJSON files to QGIS along with image giving context in demo\data\ostn0
 * Also there is the intuitively named [GridInQuestReprojector](http://docs.safe.com/fme/html/FME_Transformers/FME_Transformers.htm#Transformers/gridinquestreprojector.htm)
 	* Only supported as 32 bit
 	* Only supported in Windows (I think)
+* See example FME workspace:  **demo\fme-gridinquestreprojector.fmw** and output shapefile data at **demo\data\ostn02**

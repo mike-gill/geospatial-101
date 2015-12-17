@@ -111,3 +111,8 @@ ogr2ogr -t_srs "+init=EPSG:27700 +nadgrids=..\..\..\resources\ostn02-ntv2\OSTN02
 
 Add the GeoJSON files to QGIS along with image giving context in demo\data\ostn02.
 
+### An example using FME
+* FME does support the NTv2 adjustment grid
+* Also there is the intuitively named [GridInQuestReprojector](http://docs.safe.com/fme/html/FME_Transformers/FME_Transformers.htm#Transformers/gridinquestreprojector.htm)
+	* Only supported as 32 bit
+	* Only supported in Windows (I think)

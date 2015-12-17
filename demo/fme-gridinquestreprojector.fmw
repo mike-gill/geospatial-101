@@ -1,0 +1,1147 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files (x86)\FME\2015.1.0.3\fme.exe" C:\MJG\geospatial-101\demo\fme-gridinquestreprojector.fmw
+#          --SourceDataset_GEOJSON "C:\MJG\geospatial-101\demo\data\ostn02\test_wgs84_ntv2.json"
+#          --DestDataset_SHAPE "C:\MJG\geospatial-101\demo\data\ostn02"
+#          --DestDataset_SHAPE_3 "C:\MJG\geospatial-101\demo\data\ostn02"
+#    
+#    
+#! FME_REPROJECTION_ENGINE="FME"
+#! DESTINATION="NONE"
+#! DESTINATION_ROUTING_FILE=""
+#! MAX_LOG_FEATURES="200"
+#! FME_SERVER_SERVICES=""
+#! DESCRIPTION=""
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! TITLE=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! DOC_TOP_LEFT="100 -823.007"
+#! SHOW_ANNOTATIONS="true"
+#! LOG_MAX_PRECISION="Yes"
+#! WORKSPACE_VERSION="1"
+#! SOURCE_ROUTING_FILE=""
+#! REQUIREMENTS_KEYWORD=""
+#! END_TCL=""
+#! PASSWORD=""
+#! BEGIN_TCL=""
+#! END_PYTHON=""
+#! REDIRECT_TERMINATORS="NONE"
+#! IGNORE_READER_FAILURE="No"
+#! ZOOM_SCALE="100"
+#! FME_BUILD_NUM="15485"
+#! HISTORY=""
+#! DOC_EXTENTS="1662.02 593.007"
+#! USAGE=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-33.0003 0"
+#! REQUIREMENTS=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.0.3 (20150623 - Build 15485 - WIN32)"
+#! FME_DOCUMENT_GUID="6c4185a8-c66d-44d4-bdde-d1ccdd214a80"
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! SOURCE="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! LAST_SAVE_DATE="2015-12-17T11:32:47"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! FME_DOCUMENT_PRIORGUID="cb529604-38bb-48ee-96ec-0fab84d74ab8"
+#! SHOW_INFO_NODES="true"
+#! LOG_FILE=""
+#! CATEGORY=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! BEGIN_PYTHON=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GEOJSON"
+#! DATASET="$(SourceDataset_GEOJSON)"
+#! KEYWORD="GEOJSON_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="multi_reader_keyword string fme_start_angle float fme_text_size float fme_fill_color string fme_type string fme_feature_type string fme_rotation float fme_sweep_angle float fme_color string fme_basename string multi_reader_full_id int multi_reader_type string fme_geometry fme_char(50) fme_text_string string fme_secondary_axis float fme_dataset string fme_primary_axis float multi_reader_id int"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILE_OR_URL"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! FEATURE_TYPES=""
+#! MIN_FEATURES=""
+#! START_FEATURE=""
+#! COORDSYS="EPSG:4326"
+#! MAX_FEATURES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a name for the GeoJSON file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GEOJSON_IN_SEARCH_ENVELOPE_MINX GEOJSON_IN_SEARCH_ENVELOPE_MINY GEOJSON_IN_SEARCH_ENVELOPE_MAXX GEOJSON_IN_SEARCH_ENVELOPE_MAXY GEOJSON_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the GeoJSON file(s) or type the GeoJSON URL"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="SHAPE"
+#! DATASET="$(DestDataset_SHAPE)"
+#! KEYWORD="SHAPE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="10"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="SHAPE_GEOMETRY {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_type char(50) fme_dataset char(50) fme_fill_color char(50) fme_secondary_axis number(31,15) shape_measures char(254) fme_basename char(50) fme_text_string char(50) fme_primary_axis number(31,15) fme_feature_type char(50) fme_geometry fme_char(50) fme_start_angle number(31,15) fme_color char(50) fme_rotation number(31,15) fme_sweep_angle number(31,15)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES="INDEX"
+#! ATTR_NAME_INVALID_CHARS=". -%[]&quot;!?*&apos;&amp;\/{}"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! FANOUT_DIRECTORY=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT="No"
+#! COORDSYS=""
+#! FANOUT_SUFFIX=""
+#! FANOUT_PREFIX=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="shp file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the Esri Shape file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="SHAPE_IN_ENCODING SHAPE_OUT_STRICT_COMPATIBILITY SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Shape File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the Esri Shape file(s)"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="SHAPE"
+#! DATASET="$(DestDataset_SHAPE_3)"
+#! KEYWORD="SHAPE_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="10"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="SHAPE_GEOMETRY {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_type char(50) fme_dataset char(50) fme_fill_color char(50) fme_secondary_axis number(31,15) shape_measures char(254) fme_basename char(50) fme_text_string char(50) fme_primary_axis number(31,15) fme_feature_type char(50) fme_geometry fme_char(50) fme_start_angle number(31,15) fme_color char(50) fme_rotation number(31,15) fme_sweep_angle number(31,15)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES="INDEX"
+#! ATTR_NAME_INVALID_CHARS=". -%[]&quot;!?*&apos;&amp;\/{}"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! FANOUT_DIRECTORY=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT="No"
+#! COORDSYS="EPSG:27700"
+#! FANOUT_SUFFIX=""
+#! FANOUT_PREFIX=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="shp file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the Esri Shape file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="SHAPE_IN_ENCODING SHAPE_OUT_STRICT_COMPATIBILITY SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Shape File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the Esri Shape file(s)"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="object"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="object_or_array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(254)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="SHAPE"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_rectangle"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_rounded_rectangle"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_pointz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_pointm"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_multipointz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_multipointm"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polylinez"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polylinem"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonm"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_pointz"
+#! FME_TYPE="fme_text"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polylinez"
+#! FME_TYPE="fme_arc"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_null"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_raster"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="shape_null"
+#! FME_TYPE="fme_collection"
+#! FORMAT="SHAPE"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="test_wgs84_ntv2"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="json_point"
+#! POSITION="100 -230"
+#! BOUNDING_RECT="100 -230 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="GEOJSON_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="prop0" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="fme-default-reproj-osgb"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="3"
+#! FEAT_GEOMTYPE="shape_pointz"
+#! POSITION="1762.02 -259.003"
+#! BOUNDING_RECT="1762.02 -259.003 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="SHAPE_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="prop0" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="fme-gridinquest-osgb"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="6"
+#! FEAT_GEOMTYPE="shape_pointz"
+#! POSITION="1762.02 -823.007"
+#! BOUNDING_RECT="1762.02 -823.007 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="SHAPE_2"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="prop0" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:"
+#! DEFAULT_VALUE="$(FME_MF_DIR)data\ostn02\test_wgs84_ntv2.json"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_SHAPE Destination Esri Shape Folder:"
+#! DEFAULT_VALUE="$(FME_MF_DIR)data\ostn02"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_SHAPE_3 Destination Esri Shape Folder:"
+#! DEFAULT_VALUE="$(FME_MF_DIR)data\ostn02"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="GridInQuestReprojector"
+#! VERSION="0"
+#! POSITION="1033.01 -259.003"
+#! BOUNDING_RECT="1033.01 -259.003 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15485"
+#! >
+#! <OUTPUT_FEAT NAME="REPROJECTED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="prop0" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INTERPOLATION_TYPE_NAME" PARM_VALUE="Bilinear"/>
+#! <XFORM_PARM PARM_NAME="SOURCE_VERT_DATUM_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="DEST_VERT_DATUM_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GridInQuestReprojector"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DEST_CS_NAME" PARM_VALUE="OSGB36 (OSTN02)"/>
+#! <XFORM_PARM PARM_NAME="SOURCE_CS_NAME" PARM_VALUE="ETRS89 Geodetic (ellipsoid height)"/>
+#! <XFORM_PARM PARM_NAME="RASTER_CELL_SIZE" PARM_VALUE="Preserve Cells"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="4"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="7"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_GEOJSON_1,GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1,GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1,GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1,GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1,DestDataset_SHAPE_1,SHAPE_OUT_ENCODING_SHAPE_1,SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_1,SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_1,SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_1,SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_1,SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_1,_MEASURES_AS_Z_SHAPE_1,DestDataset_SHAPE_2,SHAPE_OUT_ENCODING_SHAPE_2,SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_2,SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_2,SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_2,SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_2,SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_2,_MEASURES_AS_Z_SHAPE_2
+DEFAULT_MACRO SourceDataset_GEOJSON $(FME_MF_DIR)data\ostn02\test_wgs84_ntv2.json
+GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO DestDataset_SHAPE $(FME_MF_DIR)data\ostn02
+GUI DIRNAME DestDataset_SHAPE Destination Esri Shape Folder:
+DEFAULT_MACRO DestDataset_SHAPE_3 $(FME_MF_DIR)data\ostn02
+GUI DIRNAME DestDataset_SHAPE_3 Destination Esri Shape Folder:
+INCLUDE [ if {{$(SourceDataset_GEOJSON)} == {}} { puts_real {Parameter 'SourceDataset_GEOJSON' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_SHAPE)} == {}} { puts_real {Parameter 'DestDataset_SHAPE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_SHAPE_3)} == {}} { puts_real {Parameter 'DestDataset_SHAPE_3' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE GEOJSON
+READER_KEYWORD GEOJSON_1
+READER_GEN_DIRECTIVES _MERGE_SCHEMAS,YES,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,Yes,CLIP_TO_ENVELOPE,NO,GEOJSON_EXPOSE_FORMAT_ATTRS,,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXY,0,USE_SEARCH_ENVELOPE,NO,DELETE_DOWNLOAD_FILE,Yes
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} SHAPE
+MULTI_WRITER_KEYWORD{0} SHAPE_1
+MULTI_WRITER_TYPE{1} SHAPE
+MULTI_WRITER_KEYWORD{1} SHAPE_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEOJSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+DEFAULT_MACRO SourceDataset_GEOJSON_1 $(SourceDataset_GEOJSON)
+GUI FILE_OR_URL SourceDataset_GEOJSON_1 GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1 Yes
+GEOJSON_1_DELETE_DOWNLOAD_FILE "$(GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1)"
+GUI CHECKBOX GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1 Yes%No Delete downloaded file
+DEFAULT_MACRO GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1 
+GEOJSON_1_EXPOSE_ATTRS_GROUP "$(GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1)"
+GUI DISCLOSUREGROUP GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1 GEOJSON_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1 Yes
+GEOJSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 NO
+GEOJSON_1_CLIP_TO_ENVELOPE "$(GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1)"
+GUI OPTIONAL CHECKBOX GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 
+GEOJSON_1_NETWORK_AUTHENTICATION "$(GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1)"
+GUI OPTIONAL AUTHENTICATOR GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 Search Envelope Coordinate System:
+GEOJSON_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1)"
+# ===========================================================================
+GEOJSON_1_DATASET "$(SourceDataset_GEOJSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SHAPE_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER SHAPE SHAPE_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# the destination for the Esri SHAPE files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_SHAPE_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER SHAPE SHAPE_1
+DEFAULT_MACRO DestDataset_SHAPE_1 $(DestDataset_SHAPE)
+GUI DIRNAME DestDataset_SHAPE_1 Destination Esri Shape Folder:
+# ============================================================================
+# Note that this mapping file has been generated to output 3d shape files
+# that have measures. FME will leave the measure data blank, but other tools
+# may update these files later to hold measures. Remember that 3d shape files
+# with measures cannot be read by ArcView 3.0a [unless you've applied the
+# latest database patch] and older, and ArcExplorer 1.1 and older.
+# If the input data source had elevation data, it will be written to the
+# output files. Otherwise, the elevation will be set to 0.
+# If you want to output "normal" 2d files compatible with older
+# ESRI products, then just remove the "z" from the geometry keywords
+# (i.e. replace "shape_polygonz" with "shape_polygon")
+# If you want to output 2d files with measures, then just replace the "z"
+# in the geometry keywords with a "m"
+# (i.e. replace "shape_polygonz" with "shape_polygonm")
+DEFAULT_MACRO SHAPE_OUT_SHAPE_FILE_TYPE_SHAPE_1 3dm
+SHAPE_1_SHAPE_FILE_TYPE "$(SHAPE_OUT_SHAPE_FILE_TYPE_SHAPE_1)"
+# ============================================================================
+# Determines whether the attribute names should be uppercased, or whether they
+# should stay as specified in the shape file. The default will be Yes for
+# backwards compatibility. Once the mapping file/workspace has been generated,
+# the value for this keyword should not be changed.
+DEFAULT_MACRO SHAPE_OUT_UPPER_CASE_ATTR_NAMES_SHAPE_1 No
+SHAPE_1_UPPER_CASE_ATTR_NAMES "$(SHAPE_OUT_UPPER_CASE_ATTR_NAMES_SHAPE_1)"
+# ============================================================================
+# The following keyword allows the user to choose what encoding to
+# use for outputting the shape file
+# BUG31194: For backwards compatibility and not outputting a .cpg file
+# we have chosen to make the writer default encoding system (ANSI)
+DEFAULT_MACRO SHAPE_OUT_ENCODING_SHAPE_1 SYSTEM
+SHAPE_1_ENCODING "$(SHAPE_OUT_ENCODING_SHAPE_1)"
+GUI OPTIONAL ENCODING SHAPE_OUT_ENCODING_SHAPE_1 ANSI%SYSTEM%BIG5%EUC%HKBIG5%ISO%OEM%SJIS%UTF-8%CP437%CP708%CP720%CP737%CP775%CP850%CP852%CP855%CP857%CP860%CP861%CP862%CP863%CP864%CP865%CP866%CP869%CP874%CP932%CP936%CP950%CP1250%CP1251%CP1252%CP1253%CP1254%CP1255%CP1256%CP1257%CP1258%ISO8859-1%ISO8859-2%ISO8859-3%ISO8859-4%ISO8859-5%ISO8859-6%ISO8859-7%ISO8859-8%ISO8859-9%ISO-8859-11%ISO8859-13%ISO8859-15%WINDOWS-874 Character Encoding:
+# ============================================================================
+# PR2557: Specifies whether or not the reader will generate spatial index files
+DEFAULT_MACRO SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_1 No
+SHAPE_1_WRITE_SPATIAL_INDEX "$(SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_1)"
+GUI CHECKBOX SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_1 Yes%No Write Spatial Index
+DEFAULT_MACRO SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_1 No
+SHAPE_1_COMPRESSED_SHAPE_FILE "$(SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_1)"
+GUI CHECKBOX SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_1 Yes%No Create Compressed Shape File (.shz)
+DEFAULT_MACRO SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_1 
+GUI DISCLOSUREGROUP SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_1 STRICT_COMPATIBILITY%PRESERVE_RING_VERTEX_ORDER Advanced
+# ============================================================================
+# BUG31474: Add an Strict compatibility flag to prevent some apps from
+# crashing when record lengths are too long. By default, we want to write
+# compatible files going forward.
+DEFAULT_MACRO SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_1 Yes
+SHAPE_1_STRICT_COMPATIBILITY "$(SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_1)"
+GUI CHECKBOX SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_1 Yes%No Strict Compatibility
+# ============================================================
+# BUG39095: Add an option to preserve input ring vertex order.
+DEFAULT_MACRO SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_1 No
+SHAPE_1_PRESERVE_RING_VERTEX_ORDER "$(SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_1)"
+GUI CHECKBOX SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_1 Yes%No Preserve Ring Vertex Order
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO SHAPE_OUT_DESTINATION_DATASETTYPE_VALIDATION_SHAPE_1 Yes
+SHAPE_1_DESTINATION_DATASETTYPE_VALIDATION "$(SHAPE_OUT_DESTINATION_DATASETTYPE_VALIDATION_SHAPE_1)"
+DEFAULT_MACRO SHAPE_OUT_COORDINATE_SYSTEM_GRANULARITY_SHAPE_1 FEATURE_TYPE
+SHAPE_1_COORDINATE_SYSTEM_GRANULARITY "$(SHAPE_OUT_COORDINATE_SYSTEM_GRANULARITY_SHAPE_1)"
+# ============================================================================
+# The following GUI line sets whether measure values in the shape files should
+# be treated as elevations.
+DEFAULT_MACRO _MEASURES_AS_Z_SHAPE_1 no
+GUI CHOICE _MEASURES_AS_Z_SHAPE_1 yes%no Treat Measures as Elevation:
+SHAPE_1_MEASURES_AS_Z $(_MEASURES_AS_Z_SHAPE_1)
+SHAPE_1_ENCODING $(SHAPE_OUT_ENCODING_SHAPE_1)
+SHAPE_1_DATASET "$(DestDataset_SHAPE_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SHAPE_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER SHAPE SHAPE_2
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# the destination for the Esri SHAPE files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_SHAPE_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER SHAPE SHAPE_2
+DEFAULT_MACRO DestDataset_SHAPE_2 $(DestDataset_SHAPE_3)
+GUI DIRNAME DestDataset_SHAPE_2 Destination Esri Shape Folder:
+# ============================================================================
+# Note that this mapping file has been generated to output 3d shape files
+# that have measures. FME will leave the measure data blank, but other tools
+# may update these files later to hold measures. Remember that 3d shape files
+# with measures cannot be read by ArcView 3.0a [unless you've applied the
+# latest database patch] and older, and ArcExplorer 1.1 and older.
+# If the input data source had elevation data, it will be written to the
+# output files. Otherwise, the elevation will be set to 0.
+# If you want to output "normal" 2d files compatible with older
+# ESRI products, then just remove the "z" from the geometry keywords
+# (i.e. replace "shape_polygonz" with "shape_polygon")
+# If you want to output 2d files with measures, then just replace the "z"
+# in the geometry keywords with a "m"
+# (i.e. replace "shape_polygonz" with "shape_polygonm")
+DEFAULT_MACRO SHAPE_OUT_SHAPE_FILE_TYPE_SHAPE_2 3dm
+SHAPE_2_SHAPE_FILE_TYPE "$(SHAPE_OUT_SHAPE_FILE_TYPE_SHAPE_2)"
+# ============================================================================
+# Determines whether the attribute names should be uppercased, or whether they
+# should stay as specified in the shape file. The default will be Yes for
+# backwards compatibility. Once the mapping file/workspace has been generated,
+# the value for this keyword should not be changed.
+DEFAULT_MACRO SHAPE_OUT_UPPER_CASE_ATTR_NAMES_SHAPE_2 No
+SHAPE_2_UPPER_CASE_ATTR_NAMES "$(SHAPE_OUT_UPPER_CASE_ATTR_NAMES_SHAPE_2)"
+# ============================================================================
+# The following keyword allows the user to choose what encoding to
+# use for outputting the shape file
+# BUG31194: For backwards compatibility and not outputting a .cpg file
+# we have chosen to make the writer default encoding system (ANSI)
+DEFAULT_MACRO SHAPE_OUT_ENCODING_SHAPE_2 SYSTEM
+SHAPE_2_ENCODING "$(SHAPE_OUT_ENCODING_SHAPE_2)"
+GUI OPTIONAL ENCODING SHAPE_OUT_ENCODING_SHAPE_2 ANSI%SYSTEM%BIG5%EUC%HKBIG5%ISO%OEM%SJIS%UTF-8%CP437%CP708%CP720%CP737%CP775%CP850%CP852%CP855%CP857%CP860%CP861%CP862%CP863%CP864%CP865%CP866%CP869%CP874%CP932%CP936%CP950%CP1250%CP1251%CP1252%CP1253%CP1254%CP1255%CP1256%CP1257%CP1258%ISO8859-1%ISO8859-2%ISO8859-3%ISO8859-4%ISO8859-5%ISO8859-6%ISO8859-7%ISO8859-8%ISO8859-9%ISO-8859-11%ISO8859-13%ISO8859-15%WINDOWS-874 Character Encoding:
+# ============================================================================
+# PR2557: Specifies whether or not the reader will generate spatial index files
+DEFAULT_MACRO SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_2 No
+SHAPE_2_WRITE_SPATIAL_INDEX "$(SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_2)"
+GUI CHECKBOX SHAPE_OUT_WRITE_SPATIAL_INDEX_SHAPE_2 Yes%No Write Spatial Index
+DEFAULT_MACRO SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_2 No
+SHAPE_2_COMPRESSED_SHAPE_FILE "$(SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_2)"
+GUI CHECKBOX SHAPE_OUT_COMPRESSED_SHAPE_FILE_SHAPE_2 Yes%No Create Compressed Shape File (.shz)
+DEFAULT_MACRO SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_2 
+GUI DISCLOSUREGROUP SHAPE_OUT_SHAPE_WRT_ADV_PARM_GROUP_SHAPE_2 STRICT_COMPATIBILITY%PRESERVE_RING_VERTEX_ORDER Advanced
+# ============================================================================
+# BUG31474: Add an Strict compatibility flag to prevent some apps from
+# crashing when record lengths are too long. By default, we want to write
+# compatible files going forward.
+DEFAULT_MACRO SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_2 Yes
+SHAPE_2_STRICT_COMPATIBILITY "$(SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_2)"
+GUI CHECKBOX SHAPE_OUT_STRICT_COMPATIBILITY_SHAPE_2 Yes%No Strict Compatibility
+# ============================================================
+# BUG39095: Add an option to preserve input ring vertex order.
+DEFAULT_MACRO SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_2 No
+SHAPE_2_PRESERVE_RING_VERTEX_ORDER "$(SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_2)"
+GUI CHECKBOX SHAPE_OUT_PRESERVE_RING_VERTEX_ORDER_SHAPE_2 Yes%No Preserve Ring Vertex Order
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO SHAPE_OUT_DESTINATION_DATASETTYPE_VALIDATION_SHAPE_2 Yes
+SHAPE_2_DESTINATION_DATASETTYPE_VALIDATION "$(SHAPE_OUT_DESTINATION_DATASETTYPE_VALIDATION_SHAPE_2)"
+DEFAULT_MACRO SHAPE_OUT_COORDINATE_SYSTEM_GRANULARITY_SHAPE_2 FEATURE_TYPE
+SHAPE_2_COORDINATE_SYSTEM_GRANULARITY "$(SHAPE_OUT_COORDINATE_SYSTEM_GRANULARITY_SHAPE_2)"
+# ============================================================================
+# The following GUI line sets whether measure values in the shape files should
+# be treated as elevations.
+DEFAULT_MACRO _MEASURES_AS_Z_SHAPE_2 no
+GUI CHOICE _MEASURES_AS_Z_SHAPE_2 yes%no Treat Measures as Elevation:
+SHAPE_2_MEASURES_AS_Z $(_MEASURES_AS_Z_SHAPE_2)
+SHAPE_2_ENCODING $(SHAPE_OUT_ENCODING_SHAPE_2)
+SHAPE_2_DATASET "$(DestDataset_SHAPE_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)fme-gridinquestreprojector.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_1 GEOJSON_1
+DEFAULT_MACRO DATASET_KEYWORD_SHAPE_1 SHAPE_1
+DEFAULT_MACRO DATASET_KEYWORD_SHAPE_2 SHAPE_2
+# -------------------------------------------------------------------------
+
+GEOJSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GEOJSON_1_COORDINATE_SYSTEM EPSG:4326
+SHAPE_2_COORDINATE_SYSTEM EPSG:27700
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME fme-gridinquestreprojector
+MACRO FME_VIEWER_APP fmeview
+# -------------------------------------------------------------------------
+GEOJSON_1_DEF test_wgs84_ntv2   prop0                        string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,GEOJSON_1)    ROUTE GEOJSON GEOJSON_1::test_wgs84_ntv2 TO FME_GENERIC ::test_wgs84_ntv2 ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEOJSON_1_MERGE_DEF GEOJSON_1::test_wgs84_ntv2 EXACT test_wgs84_ntv2
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "test_wgs84_ntv2 (GEOJSON_1) Splitter"    INPUT FEATURE_TYPE test_wgs84_ntv2    OUTPUT FEATURE_TYPE test_wgs84_ntv2_0_vCvBdX2GT3w=    OUTPUT FEATURE_TYPE test_wgs84_ntv2_1_vCvBdX2GT3w=
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+# Determine source FME coordinate system name.
+# Also, set the vertical datum for the disabled cases.
+INCLUDE [     set source_cs {LL-ETRS89};     set source_vert_datum {<Unused>};     set source_fme_cs $source_cs;     if { $source_cs == {ETRS89-CARTESIAN} } {         set source_fme_cs {};         set source_vert_datum {};     }     elseif { $source_cs == {LL-ETRS89} } {         set source_vert_datum {};     }     elseif { $source_cs == {IrishGrid1975-NI} } {         set source_fme_cs {Ireland1965.ING};         set source_vert_datum {Belfast};     }     elseif { $source_cs == {IrishGrid1975-RoI} } {         set source_fme_cs {Ireland1965.ING};         set source_vert_datum {MalinHead};     }     elseif { $source_cs == {Ireland-ITM-NI} } {         set source_fme_cs {IRENET95.IrishTM};         set source_vert_datum {Belfast};     }     elseif { $source_cs == {Ireland-ITM-RoI} } {         set source_fme_cs {IRENET95.IrishTM};         set source_vert_datum {MalinHead};     };     puts "MACRO SOURCE_FME_CS $source_fme_cs";     puts "MACRO SOURCE_VERT_DATUM $source_vert_datum"; ]
+# Determine destination FME coordinate system name.
+# Also, set the vertical datum for the disabled cases.
+INCLUDE [     set dest_cs {OSGB-GPS-2002};     set dest_vert_datum {};     set dest_fme_cs $dest_cs;     if { $dest_cs == {ETRS89-CARTESIAN} } {         set dest_fme_cs {};         set dest_vert_datum {};     }     elseif { $dest_cs == {LL-ETRS89} } {         set dest_vert_datum {};     }     elseif { $dest_cs == {IrishGrid1975-NI} } {         set dest_fme_cs {Ireland1965.ING};         set dest_vert_datum {Belfast};     }     elseif { $dest_cs == {IrishGrid1975-RoI} } {         set dest_fme_cs {Ireland1965.ING};         set dest_vert_datum {MalinHead};     }     elseif { $dest_cs == {Ireland-ITM-NI} } {         set dest_fme_cs {IRENET95.IrishTM};         set dest_vert_datum {Belfast};     }     elseif { $dest_cs == {Ireland-ITM-RoI} } {         set dest_fme_cs {IRENET95.IrishTM};         set dest_vert_datum {MalinHead};     };     puts "MACRO DEST_FME_CS $dest_fme_cs";     puts "MACRO DEST_VERT_DATUM $dest_vert_datum"; ]
+# Square brackets to indicate runtime macros, in spite of sometimes matching GUI
+# macro names.
+
+Tcl2 proc GridInQuestReprojector_CoordSysRemover {} {   global FME_CoordSys;   global GridInQuestReprojector_CSWarned;   if { ( $FME_CoordSys != {} ) && ( $FME_CoordSys != {$(SOURCE_FME_CS)} ) } {     incr GridInQuestReprojector_CSWarned;     if { [set GridInQuestReprojector_CSWarned] <= 1 } {       FME_LogMessage fme_warn \"GridInQuestReprojector: Ignoring input feature coordinate system `$FME_CoordSys'. Using `$(SOURCE_FME_CS)' instead. This warning will not be repeated.\";     };   };   set FME_CoordSys {}; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME GridInQuestReprojector    INPUT  FEATURE_TYPE test_wgs84_ntv2_0_vCvBdX2GT3w=    OUTPUT FEATURE_TYPE GridInQuestReprojector_REPROJECTED         @Tcl2(GridInQuestReprojector_CoordSysRemover)         @Reproject(GIQ,$(SOURCE_FME_CS),$(DEST_FME_CS),LL-ETRS89,$(SOURCE_VERT_DATUM),OSGB-GPS-2002,$(DEST_VERT_DATUM),--,Bilinear,PreserveCells)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC GridInQuestReprojector_REPROJECTED TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-default-reproj-osgb<closeparen> GEOMETRY    ROUTE FME_GENERIC test_wgs84_ntv2_1_vCvBdX2GT3w= TO SHAPE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>fme-gridinquest-osgb<closeparen> COORDINATE_SYSTEM EPSG:27700 GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+SHAPE_1_DEF fme-default-reproj-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)
+# -------------------------------------------------------------------------
+SHAPE_2_DEF fme-gridinquest-osgb   SHAPE_GEOMETRY               shape_pointz   prop0                        char(20)

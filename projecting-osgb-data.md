@@ -10,7 +10,7 @@
 	* Page 31:  "To cope with the distortions in the OSGB36 TRF, different transformations are needed in different parts of the country. For this reason, the national standard datum transformation between OSGB36 and ETRS89 is not a simple Helmert datum transformation. Instead, Ordnance Survey has developed a ‘rubber-sheet’ style transformation that works with a transformation grid expressed in easting and northing coordinates. The grids of northing and easting shifts between ETRS89 and OSGB36 cover Britain at a resolution of one kilometre. From these grids, a northing and easting shift for each point to be transformed is obtained by a bilinear interpolation. This is called the National Grid Transformation OSTN02, and it is freely available in software packages from the Ordnance Survey GPS website"
 
 ## Helmert Transformation	
-* The appendix gives the formulae for applying a 7 parameter Helmert transformation when converting from WGS84 to British National Grid (and back again).  This is fairly straightforward to code - eg see [src/helmert/OSGBConverter.js](src/helmert/OSGBConverter.js)
+* The appendix gives the formulae for applying a 7 parameter Helmert transformation when converting from WGS84 to British National Grid (and back again).  This is fairly straightforward to code - eg see an implementation here:   [src/helmert/OSGBConverter.js](src/helmert/OSGBConverter.js).  **NOTE - this was a quick test to see if I could interpret the PDF appendix - do not use / copy for production applications!**
 
 ## OSTN02 Transformation
 * To do a high accuracy transformation, use OSTN02 - see [Transformations and OSGM02 user guide.pdf](resources/ostn02-ogm02-files/Transformations and OSGM02 user guide.pdf).

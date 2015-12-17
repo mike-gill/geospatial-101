@@ -18,8 +18,8 @@ Cell values can represent:
   * RGB
   ![](./images/raster-data-type-pixels.jpg)
   * Paletted (eg 8 bit GIF, PNG)
-*Continuous values
-*Discrete thematic values
+* Continuous values
+* Discrete thematic values
 
 ### Raster formats
 Normal image formats, eg:
@@ -36,7 +36,7 @@ GIS formats, eg:
   * ERDAS ECW
   * LizardTech MrSID
 
-###Georeferencing Rasters
+### Georeferencing Rasters
 Any 'GIS' raster formats have georeferencing information in-built into the header of the file (eg GeoTIFF).
 
 ```
